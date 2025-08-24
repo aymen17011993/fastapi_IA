@@ -1,4 +1,4 @@
-# API de Predicción de Iris con FastAPI 🌸
+# API de Predicción de Iris con FastAPI y Machine Learning🌸
 
 Este proyecto implementa una API sencilla para servir un modelo de aprendizaje automático utilizando FastAPI. La API predice la especie de la flor de Iris basándose en las características proporcionadas. 🚀
 
