@@ -1,0 +1,30 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = "*"
+uvicorn = {extras = ["standard"], version = "*"}
+scikit-learn = "*"
+joblib = "*"
+pydantic-settings = "*"
+pydantic = "*"
+
+[dev-packages]
+ruff = "*"
+pytest = "*"
+httpx = "*"
+anyio = "*"
+pytest-cov = "*"
+
+[scripts]
+server = "uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload"
+lint = "ruff check ."
+fix = "ruff check . --fix"
+format = "ruff format ."
+test = "pytest -v -s"
+test-cov = "pytest --cov=app --cov-report=term-missing"
+
+[requires]
+python_version = "3.12"

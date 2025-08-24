@@ -1,0 +1,53 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.so
+
+# Distributions and packaging
+.Python
+build/
+dist/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+venv.bak/
+
+# Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Pipenv
+/Pipfile.lock
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+.Trashes
+Thumbs.db
+
+# Specific to this project
+model_artifacts/
+
+# Tool-specific caches
+.qodo/
+.ruff_cache/

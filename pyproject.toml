@@ -1,0 +1,43 @@
+[tool.ruff.lint]
+# Activa un conjunto más amplio de reglas para una mejor calidad de código
+# F: Pyflakes
+# E, W: pycodestyle (errores y advertencias)
+# I: isort (ordenación de imports)
+# B: Bugbear (errores comunes y anti-patrones)
+# C: Flake8-comprehensions (uso de comprensiones)
+# N: Flake8-naming (convenciones de nombres)
+# UP: Pyupgrade (sintaxis moderna de Python)
+# RUF: Reglas específicas de Ruff
+# ISC: Flake8-implicit-str-concat (concatenación implícita de cadenas)
+# PIE: Flake8-pie (errores comunes y anti-patrones)
+select = ["E", "F", "W", "I", "B", "C", "N", "UP", "RUF", "ISC", "PIE"]
+
+# Ignora algunos errores comunes o que serán manejados por el formateador
+# E501: Línea demasiado larga (manejado por el formateador)
+ignore = ["E501"]
+
+[tool.ruff]
+# Excluye directorios que no queremos revisar
+exclude = [
+    ".git",
+    ".venv",
+    "__pycache__",
+    ".pytest_cache",
+    "venv", # Añadir venv si no está ya en .gitignore
+    "env",  # Añadir env si no está ya en .gitignore
+    "dist", # Añadir dist para paquetes construidos
+]
+# Especifica la versión de Python objetivo para Ruff
+target-version = "py312"
+line-length = 88
+
+[tool.ruff.format]
+# Usa comillas dobles por consistencia
+quote-style = "double"
+
+[tool.pytest.ini_options]
+addopts = [
+    "-p no:warnings"
+]
+pythonpath = [".", "app"]
+testpaths = ["tests"]
